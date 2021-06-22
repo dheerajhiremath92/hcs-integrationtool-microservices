@@ -1,0 +1,20 @@
+apiVersion: skaffold/v2alpha3
+kind: Config
+deploy:
+  kubectl:
+    manifests:
+      - ./infra/k8s/*
+build:
+  # local:
+  #   push: false
+  googleCloudBuild:
+    projectId: temporal-sweep-317614
+  artifacts:
+    - image: us.gcr.io/temporal-sweep-317614/hcsintegrationtool
+      context: hcsintegrationtool
+      docker:
+        dockerfile: dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.js"
+            dest: .

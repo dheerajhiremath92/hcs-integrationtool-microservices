@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: integrationtool-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: integrationtool
+  template:
+    metadata:
+      labels:
+        app: integrationtool
+    spec:
+      containers:
+      - name: integrationtool
+        image: us.gcr.io/temporal-sweep-317614/hcsintegrationtool
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name:  integrationtool-srv
+spec:
+  selector:
+    app:  integrationtool
+  ports:
+  - name:  integrationtool
+    protocol: TCP
+    port:  3000
+    targetPort:  3000
