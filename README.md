@@ -18,9 +18,9 @@
 
 This repository aims to assist you to run Integration-tool to achieve above mentioned challeneges with a solid file structure as a foundation.
 
-`$ git clone https://github.com/dheerajhiremath92/hcs-integrationtool-microservice.git # or clone your own fork`
+`$ git clone https://github.com/dheerajhiremath92/hcs-integrationtool-microservices.git # or clone your own fork`
 
-`$ cd hcs-integrationtool-microservice`
+`$ cd hcs-integrationtool-microservices`
 
 `$ skaffold dev`
 
