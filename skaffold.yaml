@@ -10,7 +10,7 @@ build:
   googleCloudBuild:
     projectId: project ID on GCP
   artifacts:
-    - image: us.gcr.io/"project ID on GCP"/hcsintegrationtool
+    - image: dheerajhiremath/hcsintegrationtool
       context: hcsintegrationtool
       docker:
         dockerfile: dockerfile
