@@ -8,9 +8,9 @@ build:
   # local:
   #   push: false
   googleCloudBuild:
-    projectId: temporal-sweep-317614
+    projectId: project ID on GCP
   artifacts:
-    - image: us.gcr.io/temporal-sweep-317614/hcsintegrationtool
+    - image: us.gcr.io/"project ID on GCP"/hcsintegrationtool
       context: hcsintegrationtool
       docker:
         dockerfile: dockerfile
