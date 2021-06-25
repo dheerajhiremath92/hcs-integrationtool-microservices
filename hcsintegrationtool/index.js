@@ -17,11 +17,11 @@ app.use(scheduleemailrouter);
 app.use(viewcollectionsrouter);
 app.use(dropdbrouter);
 
-// Defining the URI of Mongodb cluster
+// Defining the URI of Mongodb 
 const MONGODB_URI =
-  "mongodb+srv://Dheeraj:Dheerajch@92@cluster0.htm2w.mongodb.net/PatientDB?retryWrites=true&w=majority";
+  "mongodb://127.0.0.1:27017";
 
-//Defining a function to connect to mongodb Cluster, upon succesfull connection fireup the server at PORT 3000
+//Defining a function to connect to mongodb, upon succesfull connection fireup the server at PORT 3000
 const start = async () => {
   try {
     await mongoose.connect(MONGODB_URI, {
